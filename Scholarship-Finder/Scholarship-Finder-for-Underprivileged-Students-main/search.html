@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Search Scholarships</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+  <ul>
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="search.html">🔍 Search Scholarships</a></li>
+    <li><a href="register.html">📝 Register</a></li>
+    <li><a href="login.html">🔐 Login</a></li>
+    <li><a href="tracker.html">📌 Application Tracker</a></li>
+    <li><a href="feedback.html">📬 Feedback</a></li>
+    <li><a href="admin_dashboard.html">🛠️ Admin Dashboard</a></li>
+  </ul>
+</nav>
+
+  <h2>Search Scholarships</h2>
+  <form id="filterForm">
+    <label>Income Range</label>
+    <select name="income">
+      <option value="">Any</option>
+      <option value="50000">Below ₹50,000</option>
+      <option value="100000">Below ₹1,00,000</option>
+    </select>
+
+    <label>Category</label>
+    <select name="category">
+      <option value="">Any</option>
+      <option value="SC">SC</option>
+      <option value="ST">ST</option>
+      <option value="OBC">OBC</option>
+      <option value="General">General</option>
+    </select>
+
+    <label>Academic Level</label>
+    <select name="level">
+      <option value="School">School</option>
+      <option value="College">College</option>
+    </select>
+
+    <label>Gender</label>
+    <select name="gender">
+      <option value="">Any</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+
+    <label>State</label>
+    <input type="text" name="state">
+
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="results">
+    <!-- JavaScript will render search results here -->
+  </div>
+</body>
+</html>

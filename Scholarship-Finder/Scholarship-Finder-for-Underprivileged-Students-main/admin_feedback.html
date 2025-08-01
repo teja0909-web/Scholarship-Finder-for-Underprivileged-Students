@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feedback Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="admin_dashboard.html">⬅ Back to Dashboard</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="search.html">🔍 Search</a></li>
+      <li><a href="logout.html">🚪 Logout</a></li>
+      <li><a href="tracker.html">📌 Application Tracker</a></li>
+      <li><a href="feedback.html">📬 Feedback</a></li>
+      <li><a href="admin_dashboard.html">🛠️ Admin Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <h2>📬 Student Feedback</h2>
+  <div id="feedbackList"></div>
+
+  <script>
+    fetch('/api/feedback')
+      .then(res => res.json())
+      .then(feedbacks => {
+        const container = document.getElementById('feedbackList');
+        if (feedbacks.length === 0) {
+          container.innerHTML = "<p>No feedback submitted.</p>";
+        } else {
+          feedbacks.forEach(item => {
+            const div = document.createElement('div');
+            div.innerHTML = `
+              <strong>${item.subject}</strong><br>
+              <p>${item.message}</p>
+              <p><em>From: ${item.email}</em></p>
+              <textarea placeholder="Reply here..."></textarea>
+              <button onclick="reply('${item.email}')">Reply</button>
+              <hr>
+            `;
+            container.appendChild(div);
+          });
+        }
+      });
+
+    function reply(email) {
+      const message = prompt(`Enter your reply to ${email}`);
+      if (message) {
+        fetch('/api/reply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, message })
+        }).then(() => alert("Reply sent!"));
+      }
+    }
+  </script>
+</body>
+</html>

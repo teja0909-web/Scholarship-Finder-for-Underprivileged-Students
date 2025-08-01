@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Scholarship</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+  <ul>
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="search.html">🔍 Search Scholarships</a></li>
+    <li><a href="register.html">📝 Register</a></li>
+    <li><a href="login.html">🔐 Login</a></li>
+    <li><a href="tracker.html">📌 Application Tracker</a></li>
+    <li><a href="feedback.html">📬 Feedback</a></li>
+    <li><a href="admin_dashboard.html">🛠️ Admin Dashboard</a></li>
+  </ul>
+</nav>
+
+  <h2>Add New Scholarship</h2>
+  <form id="addScholarshipForm" method="POST" action="/admin/add-scholarship">
+    <label>Title</label>
+    <input type="text" name="title" required>
+
+    <label>Eligibility</label>
+    <textarea name="eligibility" required></textarea>
+
+    <label>Amount</label>
+    <input type="text" name="amount" required>
+
+    <label>Last Date</label>
+    <input type="date" name="lastDate" required>
+
+    <label>Provider</label>
+    <input type="text" name="provider">
+
+    <label>Application Link</label>
+    <input type="url" name="link">
+
+    <label>Category</label>
+    <select name="category">
+      <option value="School">School</option>
+      <option value="College">College</option>
+      <option value="Women">Women</option>
+      <option value="Minority">Minority</option>
+    </select>
+
+    <button type="submit">Add Scholarship</button>
+  </form>
+</body>
+</html>

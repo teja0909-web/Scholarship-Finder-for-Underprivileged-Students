@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scholarship Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="search.html">🔍 Search</a></li>
+      <li><a href="register.html">📝 Register</a></li>
+      <li><a href="login.html">🔐 Login</a></li>
+      <li><a href="tracker.html">📌 Tracker</a></li>
+      <li><a href="feedback.html">📬 Feedback</a></li>
+      <li><a href="admin_dashboard.html">🛠️ Admin Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+  <main>
+    <section class="intro" style="text-align: center; padding: 40px;">
+      <h1>🎓 Scholarship Finder</h1>
+      <p style="max-width: 700px; margin: 20px auto; font-size: 1.2rem;">
+        Unlock opportunities for your future. Discover scholarships tailored to your academic goals, background, and financial needs. Designed especially for underprivileged students across India.
+      </p>
+      <a href="search.html" class="btn">🔍 Start Searching</a>
+    </section>
+
+    <section style="margin-top: 50px;">
+      <h2 style="text-align: center;">✨ Features</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px;">
+        <div style="background:#e3fdfd; padding:20px; border-radius:10px;">
+          <h3>🔐 Student & Admin Login</h3>
+          <p>Register as a student and get access to personalized scholarships. Admins can manage listings and users.</p>
+        </div>
+        <div style="background:#fff0f5; padding:20px; border-radius:10px;">
+          <h3>📋 Smart Filters</h3>
+          <p>Search by income, category, academic level, region, and more to find matching scholarships.</p>
+        </div>
+        <div style="background:#caffbf; padding:20px; border-radius:10px;">
+          <h3>📌 Application Tracker</h3>
+          <p>Save and track your applied scholarships with status updates and reminders.</p>
+        </div>
+        <div style="background:#f8edeb; padding:20px; border-radius:10px;">
+          <h3>🧠 Scholarship Recommender</h3>
+          <p>Get recommendations based on your profile using smart rule-based matching.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Scholarship Finder. Empowering futures, one student at a time.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆️</button>
+
+  <script>
+    // Show or hide scroll button
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // Scroll to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
