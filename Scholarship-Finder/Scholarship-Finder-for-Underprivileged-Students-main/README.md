@@ -31,8 +31,8 @@ A full-stack web application that helps underprivileged students discover and ap
 - MongoDB Atlas account with a cluster created
 
 ## 📧 Contact
-- Suhruth ghanta
-- Email:suhruthghanta12@gmail.com
+- TEJA KRISHNA
+- Email:bandlatejakrishna@gmail.com
 
 ## 🔗 Deployed Link
 - https://scholarship-finder-for-underprivileged.onrender.com
